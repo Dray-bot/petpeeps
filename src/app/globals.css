@@ -2,9 +2,32 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
+/* Global resets */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  body {
-    @apply bg-background text-foreground;
-  }
+/* Body styling */
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: #f9fafb; /* Tailwind's gray-50 */
+  color: #111827; /* Tailwind's gray-900 */
+  line-height: 1.6;
+}
+
+/* Links */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Custom utilities */
+.btn-primary {
+  @apply px-6 py-3 rounded-xl font-medium bg-blue-600 text-white hover:bg-blue-700 transition;
+}
+
+.btn-secondary {
+  @apply px-6 py-3 rounded-xl font-medium bg-gray-200 text-gray-800 hover:bg-gray-300 transition;
 }
